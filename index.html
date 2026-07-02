@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corner Store Register</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="storefront">
+
+    <!-- LEFT: THE SHELF -->
+    <section class="shelf">
+      <header class="shelf-header">
+        <h1>Corner Store</h1>
+        <p class="tagline">tap an item to ring it up</p>
+      </header>
+
+      <div id="productGrid" class="product-grid">
+        <!-- product cards injected by script.js -->
+      </div>
+    </section>
+
+    <!-- RIGHT: THE RECEIPT -->
+    <section class="receipt-wrap">
+      <div class="receipt" id="receipt">
+
+        <div class="receipt-head">
+          <div class="store-name">CORNER STORE</div>
+          <div class="store-sub">— thank you for shopping —</div>
+          <div class="dotted-rule"></div>
+        </div>
+
+        <div class="receipt-lines" id="receiptLines">
+          <p class="empty-msg" id="emptyMsg">no items yet.<br>go tap something tasty →</p>
+        </div>
+
+        <div class="dotted-rule"></div>
+
+        <div class="receipt-totals">
+          <div class="row"><span>items</span><span id="itemCount">0</span></div>
+          <div class="row"><span>subtotal</span><span>$<span id="subtotal">0.00</span></span></div>
+          <div class="row"><span>tax (8%)</span><span>$<span id="tax">0.00</span></span></div>
+          <div class="row total-row"><span>TOTAL</span><span>$<span id="grandTotal">0.00</span></span></div>
+        </div>
+
+        <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        <button id="clearBtn" class="clear-btn">Clear cart</button>
+
+        <div class="stamp" id="paidStamp">PAID</div>
+
+        <div class="perforation"></div>
+      </div>
+    </section>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
